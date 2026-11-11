@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+    
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Task Manager</h1>
+            <p>Welcome back, {{ username }}!</p>
+        </header>
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <p>0</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending Tasks</h3>
+                <p>0</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed Tasks</h3>
+                <p>0</p>
+            </div>
+
+        </section>
+
+        <section class="task-section">
+
+            <h2>My Tasks</h2>
+
+            <div class="task-form">
+                 <input type="text" id="taskInput" placeholder="Enter a new task">
+                 <button id="addTaskBtn">Add Task</button>
+           </div>
+
+           <div class="task-list" id="taskList">
+                 <p>No tasks yet. Add your first task!</p>
+           </div>
+
+        </section>
+
+    </div>
+    <script src="{{ url_for('static', path='/script.js') }}"></script>
+</body>
+</html>
